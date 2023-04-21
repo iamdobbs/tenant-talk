@@ -1,6 +1,6 @@
 ## [Tenant Talk](https://tenant-talk-frontend.onrender.com)
 
-Tenant Talk is a MERN stack web application that allows users to create and read reviews of rental properties. It utilises the Google Places API for location search, Cloudinary for image storage, and both Tailwind and HeadlessUI for the project UI.
+Tenant Talk is a MERN stack web application that allows users to create and read reviews of rental properties. It utilises the Google Places API for location search, Cloudinary for image storage, and both Tailwind and HeadlessUI for the project UI. It is fully responsive, so feel free to try it out on your mobile!
 
 You can view and interact with the project [here](https://tenant-talk-frontend.onrender.com).
 
