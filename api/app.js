@@ -12,7 +12,7 @@ const propertiesRouter = require("./routes/properties");
 const app = express();
 
 let corsOptions = {
-  origin: ["https://tenant-talk-backend.onrender.com"],
+  origin: ["https://tenant-talk-frontend.onrender.com"],
 };
 
 app.use(cors(corsOptions));
