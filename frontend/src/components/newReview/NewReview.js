@@ -52,7 +52,7 @@ const NewReview = () => {
     if (foundPropertyId) {
       try {
         const { data } = await axios.patch(
-          `/property/${foundPropertyId}`,
+          process.env.REACT_APP_API_URI + `/property/${foundPropertyId}`,
           {
             review: { ...formData, image: publicId },
           },
@@ -69,7 +69,7 @@ const NewReview = () => {
     } else {
       try {
         const { data } = await axios.post(
-          "/property",
+          process.env.REACT_APP_API_URI + "/property",
           {
             property: { address },
             review: { ...formData, image: publicId },

@@ -11,7 +11,8 @@ const useLogin = () => {
     setIsLoading(true);
 
     try {
-      const { data } = await axios.post("/user/login", formData);
+      const { data } = await axios.post(
+        process.env.REACT_APP_API_URI + "/user/login", formData);
       dispatch({
         type: "login",
         payload: data,

@@ -43,9 +43,13 @@ const UpdateProfileForm = () => {
     setIsLoading(true);
 
     try {
-      const { data } = await axios.patch("/user", formData, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const { data } = await axios.patch(
+        process.env.REACT_APP_API_URI + "/user",
+        formData,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       dispatch({
         type: "login",
         payload: data,

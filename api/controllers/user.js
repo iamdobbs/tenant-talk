@@ -4,6 +4,7 @@ const generateToken = require("../models/token_generator");
 
 const signup = async (req, res) => {
   try {
+
     const { firstName, lastName, email, password } = req.body;
 
     const salt = await bcrypt.genSalt();

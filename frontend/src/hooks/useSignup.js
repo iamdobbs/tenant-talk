@@ -11,7 +11,8 @@ const useSignup = () => {
     setIsLoading(true);
 
     try {
-      const { data } = await axios.post("/user/signup", formData);
+      const { data } = await axios.post(
+        process.env.REACT_APP_API_URI + "/user/signup", formData);
       dispatch({
         type: "login",
         payload: data,
