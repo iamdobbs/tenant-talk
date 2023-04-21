@@ -18,7 +18,7 @@ const Property = () => {
   const { id } = useParams();
   const { token } = useAuthContext();
   const [{ loading, data, error }, refetch] = useAxios({
-    url: `/property/${id}`,
+    url: process.env.REACT_APP_API_URI + `/property/${id}`,
     headers: { Authorization: `Bearer ${token}` },
   });
 

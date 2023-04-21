@@ -30,7 +30,7 @@ const Review = () => {
   const cld = useContext(CloudinaryContext);
   const { token } = useAuthContext();
   const [{ loading, data, error }, refetch] = useAxios({
-    url: `/review/${id}`,
+    url: process.env.REACT_APP_API_URI + `/review/${id}`,
     headers: { Authorization: `Bearer ${token}` },
   });
 

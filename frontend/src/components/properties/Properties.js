@@ -8,7 +8,7 @@ const Properties = () => {
   const [searchParams] = useSearchParams();
 
   const [{ loading, data, error }, refetch] = useAxios({
-    url: "/properties",
+    url: process.env.REACT_APP_API_URI + "/properties",
     method: "GET",
     params: {
       address: searchParams.get("address"),

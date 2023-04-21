@@ -16,9 +16,12 @@ const SearchValidate = ({
   const getProperty = async () => {
     setIsLoading(true);
     try {
-      const { data } = await axios.get("/property", {
-        params: { address: value },
-      });
+      const { data } = await axios.get(
+        process.env.REACT_APP_API_URI + "/property",
+        {
+          params: { address: value },
+        }
+      );
       if (data.property) {
         setFoundPropertyId(data.property._id);
       } else {
